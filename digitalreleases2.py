@@ -1634,6 +1634,7 @@ function sortTorrentsDate(){
 </head>
 <body>
   <div class="shadow">
+    <div style="padding: 5px;">Обновление: """+datetime.date.today().strftime("%d.%m.%Y")+"""</div>
     <div class="sbb">
       <button id="sortButton1" class="sButton" onclick="sortRating()">по рейтингу</button>
       <button id="sortButton2" class="sButton" onclick="sortTorrentsDate()">по дате торрент-релиза</button>
