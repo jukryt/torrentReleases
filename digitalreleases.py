@@ -122,7 +122,11 @@ def digitalReleases(days):
 				releaseDateStr = contextData.get("releaseDate")
 				if not isinstance(releaseDateStr, str):
 					raise ValueError("Ошибка загрузки релизов за " + downloadDate.strftime("%m.%Y") + ". Проблемы с releaseDate в одном из элементов items.")
-				releaseDate = datetime.datetime.strptime(releaseDateStr, "%Y-%m-%d").date()
+				try:
+					releaseDate = datetime.datetime.strptime(releaseDateStr, "%Y-%m-%d").date()
+				except Exception:
+					print("Ошибка в releaseDateStr:" + releaseDateStr)
+					releaseDate = datetime.date.today()
 				
 				if (targetDate <= releaseDate) and (releaseDate <= currentDate):
 					rDict[str(filmID)] = releaseDate
