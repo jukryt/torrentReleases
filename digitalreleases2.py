@@ -1750,8 +1750,8 @@ function sortTorrentsDate(){
 		elif movie["premierType"] == "ru":
 			prHeader = "премьера в России"
 		descriptionBlock += descriptionTemplate.format(prHeader, movie["premierDate"].strftime("%d.%m.%Y"))
-		#descriptionBlock += descriptionTemplate.format("торрент-релиз", "<a href=\"{}\" style=\"text-decoration: underline; color:black\" target=\"_blank\">{}</a> ({})".format("http://rutor.info/search/0/0/010/0/film%20" + movie["filmID"], movie["torrentsDate"].strftime("%d.%m.%Y"), movie["torrentsDateType"]))
-		descriptionBlock += descriptionTemplate.format("торрент-релиз", "{}".format(movie["torrentsDate"].strftime("%d.%m.%Y")))
+		descriptionBlock += descriptionTemplate.format("торрент-релиз", "<a href=\"{}\" style=\"text-decoration: underline; color:black\" target=\"_blank\">{}</a>".format("http://rutor.info/search/0/0/010/0/film%20" + movie["filmID"], movie["torrentsDate"].strftime("%d.%m.%Y")))
+		#descriptionBlock += descriptionTemplate.format("торрент-релиз", "{}".format(movie["torrentsDate"].strftime("%d.%m.%Y")))
 		#descriptionBlock += descriptionTemplate.format("описание", movie["description"])
 		descriptionBlock += descriptionTemplate.format("тип торрент-релиза", movie["torrentsDateType"])
 		
